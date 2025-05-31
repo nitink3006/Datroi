@@ -52,7 +52,7 @@ const Research = () => {
               <div className="absolute -top-6 -left-6 w-64 h-64 bg-accent-100 rounded-lg"></div>
               <img 
                 src="https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
-                alt="Research Services" 
+                alt="Research" 
                 className="w-full h-auto rounded-lg shadow-lg relative z-10"
               />
             </motion.div>
@@ -63,7 +63,7 @@ const Research = () => {
               className="inline-block px-4 py-2 rounded-full bg-accent-100 text-primary-600 font-medium text-sm mb-4"
               {...fadeIn}
             >
-              Research Services
+              Research
             </motion.span>
             
             <motion.h2 
@@ -79,7 +79,7 @@ const Research = () => {
               {...fadeIn}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              Our comprehensive research services provide in-depth analysis and insights across various 
+              Our comprehensive Research provide in-depth analysis and insights across various 
               industries to support strategic business planning. We deliver data-driven solutions that 
               help organizations make informed decisions, understand market dynamics, and identify new 
               opportunities for growth and innovation.
