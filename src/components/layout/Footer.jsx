@@ -97,10 +97,10 @@ const Footer = () => {
 Plot no. 785, Udyog Vihar, Phase 5 Industrial Complex, Gurugram, India
                 </span>
               </li>
-              <li className="flex items-center">
+{/*               <li className="flex items-center">
                 <FaPhone className="mr-3 text-accent-500" />
                 <span className="text-sm opacity-80">+91 98765 43210</span>
-              </li>
+              </li> */}
               <li className="flex items-center">
                 <FaEnvelope className="mr-3 text-accent-500" />
                 <span className="text-sm opacity-80">info@datroi.com</span>
