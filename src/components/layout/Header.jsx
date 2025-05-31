@@ -72,7 +72,7 @@ const Header = ({ scrolled }) => {
               
               {isBusinessOpen && (
                 <div 
-                  className="absolute top-full left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-2 z-50"
+                  className="absolute top-full left-0 mt-2 w-56 bg-white rounded-md shadow-lg py-2 z-50 max-h-96 overflow-y-auto"
                 >
                   <Link 
                     to="/#education" 
@@ -95,6 +95,61 @@ const Header = ({ scrolled }) => {
                     }}
                   >
                     Real Estate
+                  </Link>
+                  <Link 
+                    to="/#hr" 
+                    className="block px-4 py-2 text-primary-600 hover:bg-primary-50 transition-colors duration-300"
+                    onClick={(e) => {
+                      e.preventDefault()
+                      document.getElementById('hr')?.scrollIntoView({ behavior: 'smooth' })
+                      setIsBusinessOpen(false)
+                    }}
+                  >
+                    HR
+                  </Link>
+                  <Link 
+                    to="/#internships" 
+                    className="block px-4 py-2 text-primary-600 hover:bg-primary-50 transition-colors duration-300"
+                    onClick={(e) => {
+                      e.preventDefault()
+                      document.getElementById('internships')?.scrollIntoView({ behavior: 'smooth' })
+                      setIsBusinessOpen(false)
+                    }}
+                  >
+                    Internships
+                  </Link>
+                  <Link 
+                    to="/#investment" 
+                    className="block px-4 py-2 text-primary-600 hover:bg-primary-50 transition-colors duration-300"
+                    onClick={(e) => {
+                      e.preventDefault()
+                      document.getElementById('investment')?.scrollIntoView({ behavior: 'smooth' })
+                      setIsBusinessOpen(false)
+                    }}
+                  >
+                    Investment and Funding
+                  </Link>
+                  <Link 
+                    to="/#research" 
+                    className="block px-4 py-2 text-primary-600 hover:bg-primary-50 transition-colors duration-300"
+                    onClick={(e) => {
+                      e.preventDefault()
+                      document.getElementById('research')?.scrollIntoView({ behavior: 'smooth' })
+                      setIsBusinessOpen(false)
+                    }}
+                  >
+                    Research
+                  </Link>
+                  <Link 
+                    to="/#society" 
+                    className="block px-4 py-2 text-primary-600 hover:bg-primary-50 transition-colors duration-300"
+                    onClick={(e) => {
+                      e.preventDefault()
+                      document.getElementById('society')?.scrollIntoView({ behavior: 'smooth' })
+                      setIsBusinessOpen(false)
+                    }}
+                  >
+                    Society
                   </Link>
                 </div>
               )}
@@ -129,9 +184,9 @@ const Header = ({ scrolled }) => {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: "-100%" }}
               transition={{ duration: 0.3 }}
-              className="fixed inset-0 bg-white flex flex-col items-center justify-center lg:hidden"
+              className="fixed inset-0 bg-white flex flex-col items-center justify-center lg:hidden overflow-y-auto"
             >
-              <nav className="flex flex-col items-center space-y-8">
+              <nav className="flex flex-col items-center space-y-6 py-8">
                 <NavLink 
                   to="/" 
                   className={({ isActive }) => 
@@ -143,11 +198,11 @@ const Header = ({ scrolled }) => {
                 </NavLink>
                 
                 {/* Business Section in Mobile Menu */}
-                <div className="flex flex-col items-center space-y-4">
-                  <span className="text-primary-600 text-xl font-medium">Business</span>
+                <div className="flex flex-col items-center space-y-3">
+                  <span className="text-primary-600 text-xl font-medium mb-2">Business</span>
                   <Link 
                     to="/#education" 
-                    className="text-primary-600 text-lg"
+                    className="text-primary-600 text-lg hover:text-accent-500 transition-colors"
                     onClick={(e) => {
                       e.preventDefault()
                       closeMenu()
@@ -160,7 +215,7 @@ const Header = ({ scrolled }) => {
                   </Link>
                   <Link 
                     to="/#real-estate" 
-                    className="text-primary-600 text-lg"
+                    className="text-primary-600 text-lg hover:text-accent-500 transition-colors"
                     onClick={(e) => {
                       e.preventDefault()
                       closeMenu()
@@ -170,6 +225,71 @@ const Header = ({ scrolled }) => {
                     }}
                   >
                     Real Estate
+                  </Link>
+                  <Link 
+                    to="/#hr" 
+                    className="text-primary-600 text-lg hover:text-accent-500 transition-colors"
+                    onClick={(e) => {
+                      e.preventDefault()
+                      closeMenu()
+                      setTimeout(() => {
+                        document.getElementById('hr')?.scrollIntoView({ behavior: 'smooth' })
+                      }, 100)
+                    }}
+                  >
+                    HR
+                  </Link>
+                  <Link 
+                    to="/#internships" 
+                    className="text-primary-600 text-lg hover:text-accent-500 transition-colors"
+                    onClick={(e) => {
+                      e.preventDefault()
+                      closeMenu()
+                      setTimeout(() => {
+                        document.getElementById('internships')?.scrollIntoView({ behavior: 'smooth' })
+                      }, 100)
+                    }}
+                  >
+                    Internships
+                  </Link>
+                  <Link 
+                    to="/#investment" 
+                    className="text-primary-600 text-lg hover:text-accent-500 transition-colors"
+                    onClick={(e) => {
+                      e.preventDefault()
+                      closeMenu()
+                      setTimeout(() => {
+                        document.getElementById('investment')?.scrollIntoView({ behavior: 'smooth' })
+                      }, 100)
+                    }}
+                  >
+                    Investment and Funding
+                  </Link>
+                  <Link 
+                    to="/#research" 
+                    className="text-primary-600 text-lg hover:text-accent-500 transition-colors"
+                    onClick={(e) => {
+                      e.preventDefault()
+                      closeMenu()
+                      setTimeout(() => {
+                        document.getElementById('research')?.scrollIntoView({ behavior: 'smooth' })
+                      }, 100)
+                    }}
+                  >
+                    Research
+                  </Link>
+                  <Link 
+                    to="/#society" 
+                    className="text-primary-600 text-lg hover:text-accent-500 transition-colors"
+                    onClick={(e) => {
+                      e.preventDefault()
+                      closeMenu()
+                      setTimeout(() => {
+                        document.getElementById('society')?.scrollIntoView({ behavior: 'smooth' })
+                      }, 100)
+                    }}
+                  >
+                    Society
                   </Link>
                 </div>
 

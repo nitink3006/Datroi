@@ -6,7 +6,7 @@ const Hero = () => {
     <section className="relative bg-primary-600 text-white min-h-screen flex items-center">
       {/* Background Pattern */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-full bg-[url('https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=1600')] bg-cover bg-center opacity-20"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[url('https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1600')] bg-cover bg-center opacity-20"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-primary-700/80 to-primary-600"></div>
       </div>
       
@@ -28,9 +28,9 @@ const Hero = () => {
               <Link to="/contact" className="btn-primary bg-accent-500 hover:bg-accent-600">
                 Get Started
               </Link>
-              <Link to="/#business-areas" className="btn-secondary bg-transparent text-white border-white hover:bg-white/10">
+              {/* <Link to="/#business-areas" className="btn-secondary bg-transparent text-white border-white hover:bg-white/10">
                 Learn More
-              </Link>
+              </Link> */}
             </div>
           </motion.div>
           
@@ -43,8 +43,8 @@ const Hero = () => {
             <div className="relative">
               <div className="absolute -top-6 -left-6 w-64 h-64 bg-accent-500/20 rounded-lg"></div>
               <img 
-                src="https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
-                alt="Datroi team members collaborating" 
+                src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                alt="Professional development and growth concept" 
                 className="w-full h-auto rounded-lg shadow-xl relative z-10"
               />
             </div>
