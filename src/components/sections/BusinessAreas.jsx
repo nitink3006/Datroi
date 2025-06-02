@@ -5,7 +5,6 @@ const BusinessAreas = () => {
   const [isVisible, setIsVisible] = useState(false);
   
   useEffect(() => {
-    // Simulate animation trigger on component mount
     const timer = setTimeout(() => {
       setIsVisible(true);
     }, 300);
@@ -68,7 +67,8 @@ const BusinessAreas = () => {
         'Online learning platforms',
         'Educational consulting services'
       ],
-      color: 'bg-gradient-to-r from-blue-500 to-indigo-600'
+      color: 'bg-gradient-to-r from-blue-500 to-indigo-600',
+      redirectUrl: 'https://education.datroi.com/'  // Specific URL for education
     },
     {
       id: 'real-estate',
@@ -82,7 +82,8 @@ const BusinessAreas = () => {
         'Property management services',
         'Real estate valuation'
       ],
-      color: 'bg-gradient-to-r from-emerald-500 to-teal-600'
+      color: 'bg-gradient-to-r from-emerald-500 to-teal-600',
+      redirectUrl: 'https://interior.datroi.com/'  // Specific URL for real estate
     },
     {
       id: 'hr',
@@ -96,7 +97,8 @@ const BusinessAreas = () => {
         'HR policy development',
         'Performance management systems'
       ],
-      color: 'bg-gradient-to-r from-purple-500 to-fuchsia-600'
+      color: 'bg-gradient-to-r from-purple-500 to-fuchsia-600',
+      redirectUrl: 'https://hr.datroi.com/'  // Specific URL for HR
     },
     {
       id: 'internships',
@@ -110,7 +112,8 @@ const BusinessAreas = () => {
         'Skill-based training',
         'Career guidance & support'
       ],
-      color: 'bg-gradient-to-r from-amber-500 to-orange-600'
+      color: 'bg-gradient-to-r from-amber-500 to-orange-600',
+      redirectUrl: 'https://internships.datroi.com/'  // Specific URL for internships
     },
     {
       id: 'investment',
@@ -124,7 +127,8 @@ const BusinessAreas = () => {
         'Financial planning services',
         'Risk assessment & analysis'
       ],
-      color: 'bg-gradient-to-r from-green-500 to-lime-600'
+      color: 'bg-gradient-to-r from-green-500 to-lime-600',
+      redirectUrl: 'https://investment.datroi.com/'  // Specific URL for investment
     },
     {
       id: 'research',
@@ -138,7 +142,8 @@ const BusinessAreas = () => {
         'Data collection & insights',
         'Custom research solutions'
       ],
-      color: 'bg-gradient-to-r from-cyan-500 to-sky-600'
+      color: 'bg-gradient-to-r from-cyan-500 to-sky-600',
+      redirectUrl: 'https://research.datroi.com/'  // Specific URL for research
     },
     {
       id: 'society',
@@ -152,16 +157,15 @@ const BusinessAreas = () => {
         'Environmental initiatives',
         'Educational outreach'
       ],
-      color: 'bg-gradient-to-r from-rose-500 to-pink-600'
+      color: 'bg-gradient-to-r from-rose-500 to-pink-600',
+      redirectUrl: 'https://community.datroi.com/'  // Specific URL for society
     }
   ]
   
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
-    }
-  }
+  // Redirect function to handle navigation
+  const redirectToService = (url) => {
+    window.location.href = url;
+  };
   
   return (
     <section id="business-areas" className="py-20 bg-gradient-to-b from-gray-50 to-white">
@@ -200,7 +204,7 @@ const BusinessAreas = () => {
                   {/* Image with gradient overlay */}
                   <div 
                     className="relative h-48 overflow-hidden cursor-pointer" 
-                    onClick={() => scrollToSection(area.id)}
+                    onClick={() => redirectToService(area.redirectUrl)}
                   >
                     <img 
                       src={area.image}
@@ -245,7 +249,7 @@ const BusinessAreas = () => {
                     </div>
                     
                     <button 
-                      onClick={() => scrollToSection(area.id)}
+                      onClick={() => redirectToService(area.redirectUrl)}
                       className="mt-auto inline-flex items-center font-medium text-blue-600 hover:text-blue-800 transition-colors duration-300 cursor-pointer group/button"
                     >
                       <span className="mr-2">Explore Services</span>
